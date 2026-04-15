@@ -225,12 +225,12 @@ function App() {
 
       {GameState === 'begin' && (
         <div className='flex-1 flex items-center justify-center px-4 flex-col gap-4'>
-          <select value={level} onChange={(event) => setLevel(Number(event.target.value))}>
+          <select class='border-b border-zinc-400 outline-none p-2' value={level} onChange={(event) => setLevel(Number(event.target.value))}>
             <option value={1}>Easy - most known countries</option>
             <option value={2}>Tough - mixed pool</option>
             <option value={3}>Hard - all countries</option>
           </select>
-          <button className="border border-zinc-300 rounded-md p-2 bg-zinc-100" onClick={() => GameStart()}>Start Game</button>
+          <button className="border border-zinc-300 rounded-md p-2 bg-zinc-100" onClick={() => GameStart()}>Start Game!</button>
         </div>
       )}
       {GameState === 'game' && (
